@@ -1,0 +1,213 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000;
+    color: #c0c0c0;
+
+    /* required by assignment instructions */
+    margin: 8px;
+    display: block;
+}
+
+/* style the header */
+header {
+    text-align: center;
+    color: #000;
+}
+
+hr {
+    width: 95%;
+}
+
+p {
+    margin-top:10px;
+    margin-bottom: 5px;
+}
+
+footer {
+    margin: 0 30px;
+    
+}
+
+/* container for flexboxes */
+.container{
+    display: flex;
+    /* justify-content: center */
+    width: 70%;
+    margin: auto;
+}
+
+/* create 3 unequal columns that sits next to each other */
+.item {
+    padding: 10px;
+    /* height: 300px; */
+}
+
+/* left and right columns */
+.item.side {
+    flex-grow: 1;
+}
+
+/* middle column */
+.item.middle {
+    flex-grow: 2;
+}
+
+/* create 2 unequal columns that float next to each other */
+.row {
+    margin-bottom: 10px;
+}
+.column {
+    float: left;
+    /* padding: 10px; */
+    /* height: 300px; */
+}
+
+.left {
+    width: 20%;
+}
+
+.right {
+    width: 80%;
+}
+
+/* clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.gold-gradient {
+    background-image: linear-gradient(
+        to right, 
+        rgba(174, 134, 37),
+        rgba(174, 134, 37, .5),
+        rgba(247, 239, 138, .8),
+        rgba(210, 172, 71, .6),
+        rgba(237, 201, 103, .7));
+
+    background-size: 100%;
+
+    /* background-clip: text; */
+}
+
+.nav-pane a:hover {
+    background-image: linear-gradient(
+        to right, 
+        rgba(174, 134, 37),
+        rgba(174, 134, 37, .5),
+        rgba(247, 239, 138, .8),
+        rgba(210, 172, 71, .6),
+        rgba(237, 201, 103, .7));
+
+    border-radius: 2px;
+}
+
+.article-title {
+    margin-bottom: 0;
+    font-weight: bold;
+}
+
+.gold-text {
+    font-weight: bold;
+    font-size: 18px;
+    background: linear-gradient(
+        to right, 
+        rgba(174, 134, 37),
+        rgba(174, 134, 37, 1),
+        rgba(247, 239, 138, 1),
+        rgba(210, 172, 71, .6),
+        rgba(237, 201, 103, .7));
+    
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.in-article-text-link {
+    color: #c0c0c0;
+    /* text-decoration: none; */
+}
+
+.in-article-image {
+    border-radius: 5px;
+    margin-top: 5px;
+    padding: 5px;
+    width: 90%;
+    float: left;
+}
+
+.in-article-list {
+    margin-top: -5px;
+ }
+
+ .in-article-subtitle {
+    font-weight: bold;
+    color:#000;
+    /* background-clip: text; */
+    /* -webkit-text-fill-color: transparent; */
+ }
+
+.link-no-underline {
+    color: #c0c0c0;
+    text-decoration: none;
+}
+
+.list-no-bullets {
+    list-style-type: none;
+}
+
+.nav-pane {
+    font-family: serif;
+    padding: 0;
+    margin: 2px;
+    font-weight: bolder;
+    font-size: larger;
+
+}
+
+.section-article {
+    /* margin-left: 1%; */
+    margin-top: -20px;
+    /* margin-bottom: 10px; */
+}
+
+.section-divider {
+    opacity: 0.5;
+}
+
+.section-title {
+    margin-bottom: 1%;
+}
+
+#sub-header {
+    margin-top: -10px;
+    font-style: italic;
+    font-size: 20px;
+}
+
+#copyright {
+    text-align: right;
+}
+
+/* required by assignment instructions */
+#mainHeading {
+    color: red;
+}
+
+/* required by assignment instructions */
+/* not sure why the color change doesn't work, added color to index.html directly instead*/
+#testP .funParagraph {
+    color: green;
+}
+
+/* responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+    .row {
+        flex-direction: column;
+    }
+}
